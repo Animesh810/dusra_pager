@@ -1,0 +1,31 @@
+{
+    "animal_farm": {
+        "title": "Animal Farm",
+        "author": "George Orwell",
+        "publisher": "Secker & Warburg",
+        "short_summary": "A satirical allegory of Soviet totalitarianism.",
+        "summaries": [
+            { "duration": "5 Minutes", "file": "Summaries/animal_farm_5_min.txt" },
+            { "duration": "20 Minutes", "file": "Summaries/animal_farm_20_min.txt" }
+        ]
+    },
+    "Hooked": {
+        "title": "Hooked",
+        "author": "Nir Eyal",
+        "publisher": "Portfolio",
+        "short_summary": "How to build habit-forming products.",
+        "summaries": [
+            { "duration": "23 Minutes", "file": "Summaries/hooked_nir_eyal_23mins.txt" }
+        ]
+    },
+    "Ikigai": {
+        "title": "Ikigai",
+        "author": "Héctor García, Francesc Miralles",
+        "publisher": "Penguin Books",
+        "short_summary": "The Japanese secret to a long and happy life.",
+        "summaries": [
+            { "duration": "57 Minutes", "file": "Summaries/ikigai_57_min.txt" },
+            { "duration": "13 Minutes", "file": "Summaries/ikigai_13_min.txt" }
+        ]
+    }
+}

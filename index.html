@@ -19,7 +19,7 @@
         }
         header {
             text-align: center;
-            background-color: #ffeb3b;
+            background-color: #ff9933;
             padding: 20px 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
@@ -36,8 +36,9 @@
         .book-carousel {
             display: flex;
             overflow-x: auto;
-            margin: 20px 0;
+            margin: 20px auto;
             padding: 10px;
+            justify-content: center;
         }
         .book-carousel img {
             width: 150px;
@@ -49,30 +50,42 @@
         }
         .summary-options {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            flex-wrap: wrap;
             margin: 40px 0;
         }
         .summary-options div {
             background-color: #fff;
             border-radius: 10px;
-            padding: 20px;
-            width: 45%;
+            padding: 10px;
+            width: 30%;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             text-align: center;
             transition: transform 0.3s ease;
             cursor: pointer;
-        }
-        .summary-options div:hover {
-            transform: scale(1.05);
+            margin: 10px;
         }
         .summary-options h2 {
-            margin: 10px 0;
-            font-size: 1.5em;
+            margin: 5px 0;
+            font-size: 1.2em;
             color: #333;
         }
         .summary-options p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .book-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .book-info h2 {
+            font-size: 2em;
+            color: #333;
+        }
+        .book-info p {
             font-size: 1em;
             color: #666;
+            margin: 5px 0;
         }
         .summary-text {
             text-align: center;
@@ -92,6 +105,47 @@
         }
     </style>
     <script>
+        let booksData = {};
+
+        function fetchBooksData() {
+            fetch('books_info.json')
+                .then(response => response.json())
+                .then(data => {
+                    booksData = data;
+                    populateBooksCarousel();
+                })
+                .catch(error => console.error('Error fetching books data:', error));
+        }
+
+        function populateBooksCarousel() {
+            const bookCarousel = document.querySelector('.book-carousel');
+            bookCarousel.innerHTML = '';
+            for (const book in booksData) {
+                const bookImg = document.createElement('img');
+                bookImg.src = `Covers/${book}.jpg`;
+                bookImg.alt = booksData[book].title;
+                bookImg.onclick = () => showSummaryOptions(book);
+                bookCarousel.appendChild(bookImg);
+            }
+        }
+
+        function showSummaryOptions(book) {
+            const optionsContainer = document.querySelector('.summary-options');
+            const bookInfo = booksData[book];
+            const bookInfoContainer = document.querySelector('.book-info');
+            bookInfoContainer.innerHTML = `<h2>${bookInfo.title}</h2>
+                                           <p><strong>Author:</strong> ${bookInfo.author}</p>
+                                           
+                                           <p>${bookInfo.short_summary}</p>`;
+            optionsContainer.innerHTML = '';
+            bookInfo.summaries.forEach(option => {
+                const optionDiv = document.createElement('div');
+                optionDiv.onclick = () => fetchSummary(option.file);
+                optionDiv.innerHTML = `<p><b>${option.duration}</b></p>`;
+                optionsContainer.appendChild(optionDiv);
+            });
+        }
+
         function fetchSummary(url) {
             fetch(url)
                 .then(response => response.text())
@@ -100,29 +154,8 @@
                 })
                 .catch(error => console.error('Error fetching summary:', error));
         }
-        function showSummaryOptions(book) {
-            const summaryOptions = {
-                "animal_farm": [
-                    { duration: "5 Minutes", file: "Summaries/animal_farm_5_min.txt" },
-                    { duration: "20 Minutes", file: "Summaries/animal_farm_20_min.txt" }
-                ],
-                "Hooked": [
-                    { duration: "23 Minutes", file: "Summaries/hooked_nir_eyal_23mins.txt" },
-                ],
-                "Ikigai": [
-                    { duration: "57 Minutes", file: "Summaries/ikigai_57_min.txt" },
-                    { duration: "13 Minutes", file: "Summaries/ikigai_13_min.txt" },
-                ]
-            };
-            const optionsContainer = document.querySelector('.summary-options');
-            optionsContainer.innerHTML = '';
-            summaryOptions[book].forEach(option => {
-                const optionDiv = document.createElement('div');
-                optionDiv.onclick = () => fetchSummary(option.file);
-                optionDiv.innerHTML = `<h2>${option.duration}</h2><p>Summary</p>`;
-                optionsContainer.appendChild(optionDiv);
-            });
-        }
+
+        document.addEventListener('DOMContentLoaded', fetchBooksData);
     </script>
 </head>
 <body>
@@ -134,9 +167,11 @@
         </header>
 
         <div class="book-carousel">
-            <img src="Covers/animal_farm.jpg" alt="Animal Farm" onclick="showSummaryOptions('animal_farm')">
-            <img src="Covers\hooked_nir_eyal.jpg" alt="Hooked" onclick="showSummaryOptions('Hooked')">
-            <img src="Covers\Ikigai.jpg" alt="Ikigai" onclick="showSummaryOptions('Ikigai')">
+            <!-- Book covers will be populated here -->
+        </div>
+
+        <div class="book-info">
+            <!-- Book metadata will be populated here -->
         </div>
 
         <div class="summary-options">
