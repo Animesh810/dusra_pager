@@ -121,8 +121,9 @@
             const bookCarousel = document.querySelector('.book-carousel');
             bookCarousel.innerHTML = '';
             for (const book in booksData) {
+                const bookInfo = booksData[book];
                 const bookImg = document.createElement('img');
-                bookImg.src = `Covers/${book}.jpg`;
+                bookImg.src = `${bookInfo.book_cover_source}`;
                 bookImg.alt = booksData[book].title;
                 bookImg.onclick = () => showSummaryOptions(book);
                 bookCarousel.appendChild(bookImg);

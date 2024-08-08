@@ -4,6 +4,7 @@
         "author": "George Orwell",
         "publisher": "Secker & Warburg",
         "short_summary": "A satirical allegory of Soviet totalitarianism.",
+        "book_cover_source": "Covers/animal_farm.jpg",
         "summaries": [
             { "duration": "5 Minutes", "file": "Summaries/animal_farm_5_min.txt" },
             { "duration": "20 Minutes", "file": "Summaries/animal_farm_20_min.txt" }
@@ -14,6 +15,7 @@
         "author": "Nir Eyal",
         "publisher": "Portfolio",
         "short_summary": "How to build habit-forming products.",
+        "book_cover_source": "Covers/hooked_nir_eyal.jpg",
         "summaries": [
             { "duration": "23 Minutes", "file": "Summaries/hooked_nir_eyal_23mins.txt" }
         ]
@@ -23,6 +25,7 @@
         "author": "Héctor García, Francesc Miralles",
         "publisher": "Penguin Books",
         "short_summary": "The Japanese secret to a long and happy life.",
+        "book_cover_source": "Covers/Ikigai.jpg",
         "summaries": [
             { "duration": "57 Minutes", "file": "Summaries/ikigai_57_min.txt" },
             { "duration": "13 Minutes", "file": "Summaries/ikigai_13_min.txt" }
