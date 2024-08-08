@@ -11,21 +11,42 @@ body {
     padding: 20px;
 }
 header {
-    text-align: center;
     background-color: #ff9933;
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-header h1 {
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-title {
+    flex: 1;
+    text-align: left; /* Align text to the left for better spacing with the logo */
+}
+
+.header-title h1 {
     margin: 0;
     font-size: 2.5em;
     color: #333;
 }
-header p {
+
+.header-title p {
     margin: 10px 0 0;
     font-size: 1.2em;
     color: #666;
 }
+
+.logo {
+    width: 150px; /* Adjust the width as necessary */
+    height: auto;
+    margin-left: 20px;
+}
+
 .book-carousel {
     display: flex;
     overflow-x: auto;
@@ -45,7 +66,7 @@ header p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 .summary-options div {
     background-color: #fff;
