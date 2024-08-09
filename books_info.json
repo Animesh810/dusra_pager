@@ -1,4 +1,26 @@
 {
+    "haunting_adeline": {
+        "title": "Haunting Adeline (Cat and Mouse, #1)",
+        "author": "H. D. Carlton",
+        "publisher": "Penguin Books",
+        "short_summary": "Haunting Adeline follows Adeline Reilly, a young author who has recently moved into her family's home in Washington state following the death of her grandmother. She is stalked by Zade Meadows, the leader of an underground organization, Z, which aims to end human trafficking.",
+        "book_cover_source": "Covers/haunting_adeline_hd_carlton.jpeg",
+        "summaries": [
+            { "duration": "16 Minutes", "file": "Summaries/haunting_adeline_16_min.txt" },
+            { "duration": "48 Minutes", "file": "Summaries/haunting_adeline_48_min.txt" }
+        ]
+    },
+    "elon_musk": {
+        "title": "Elon Musk",
+        "author": "Ashlee Vance",
+        "publisher": "HarperCollins",
+        "short_summary": "The biography of Elon Musk that delves into the life of the billionaire entrepreneur exploring his struggles, successes, and vision to change the world through SpaceX, Tesla, and SolarCity.",
+        "book_cover_source": "Covers/elon_musk_ashlee_vance.jpeg",
+        "summaries": [
+            { "duration": "8 Minutes", "file": "Summaries/elon_musk_8_min.txt" },
+            { "duration": "40 Minutes", "file": "Summaries/elon_musk_40_min.txt" }
+        ]
+    },
     "animal_farm": {
         "title": "Animal Farm",
         "author": "George Orwell",
@@ -31,4 +53,5 @@
             { "duration": "13 Minutes", "file": "Summaries/ikigai_13_min.txt" }
         ]
     }
+
 }
