@@ -1,106 +1,158 @@
-header{
-    border-radius: 25px;
-    background-color: #3897a3;
-    height: 200px;
-}
-.main-header{
-    margin: 0 auto;
-}
-.container {
-    /* max-width: 1200px; */
-    padding: 20px;
-    
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #B0E0E6;
+    color: #0b0b0a;
+    /* color: #18181b; */
+    margin: 0px;
+    /* padding: 20px; */
 }
 
 .navbar {
-    font-family: 'Arial', sans-serif;
+    margin: 0 ;
+    padding: 20px;
+    
+    /* border-radius: 25px; */
+    background-color: #3897a3;
+    height: auto;
     display: flex;
-    align-content: left;
-    /* justify-content: space-evenly; */
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
     /* color: #18181b; */
 }
 
 .site_name {
-    font-family: 'Arial', sans-serif;
-    color: #0b0b0a;
+    justify-content: space-around;
+    /* padding: 20px; */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
     align-content: left;
-    justify-content: space-evenly;
-    padding: 20px;
     /* color: #18181b; */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    
 }
 
-.navbar h1{
-    font-size: 40px;
+.site_name h1{
+    font-size: 50px;
+    margin: 5px; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
 }
-.navbar h2{
+.site_name h2{
     font-size: 20px;
+    margin: 5px; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
 }
+
 .logo img {
     justify-content: right;
     box-align: right;
     width: 325px;
-    height: 172px;
-    margin: 20px;
+    margin-right: 10px;
+
+    /* height: 150px; */
+    /* margin: 10px; */
+}
+ 
+
+.story-list-title h1{
+    margin: 10px 20px;
+    /* padding: 10px; */
+    font-size: 30px;
+    font-weight: bold;
 }
 
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #B0E0E6;
-    /* color: #18181b; */
-    margin: 0px;
-    padding: 20px;
-}
 
 .story-list {
     list-style-type: none; /* Remove default list styling */
     padding: 0; /* Remove default padding */
     border-radius: 20px;
-    margin: 20px; 
+    margin: 10px 20px ; 
 }
 
 .story-list li {
-    padding: 10px;
-    margin: 10px 0; /* Adds space between list items */
-    background-color: #333; /* Set a background color for each list item */
-    color: white; /* Set text color */
+    padding: 10px 20px; /* Reduced top and bottom padding */
+    margin: 10px 0px; /* Adds space between list items */
+    background-color: #6fd8e6; /* Set a background color for each list item */
     border-radius: 10px; /* Optional: Adds rounded corners to list items */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* align-content: flex-start; */
+
 }
+
+
 
 .story-list li:hover {
     background-color: #ff9933; /* Change color on hover */
 }
 
 .story-list-text{
-    color: white; /* Set text color */
-    align-items: flex-start;
+    color: white; /* Set text color to white */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    align-content: left;
+    justify-content: top;
+
+    /* color: #18181b; */
+    margin: 0; /* Remove any default margin */
+    padding: 0; Remove any default padding
 } 
+
 
 .story-list-text p {
     font-weight: 50;
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    
 }
 .story-list-text h2 {
     font-weight: 100;
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    
 }
 
 .story-list button{
     height: 50px;
+    width: 100px;
     align-items: center;
+    margin-right: 40px;
 }
 
 
 footer {
     color: #ff9933;
+    /* margin-top:20px; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-family: 'Arial', sans-serif;
     background-color: #99181b;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     /* margin: 100px; */
-    padding: 20px 20px 0px 0px;
+    /* padding: 20px 20px 0px 0px; */
+    padding: 20px;
 }
+
+
+hr{
+    margin: 0px;
+}
+.navbar-horizontal-line {
+    border: 2px solid;
+  }
+.story-list-title-hl{
+    border: 2px solid #4f4949a7; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+ }
