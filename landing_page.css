@@ -1,106 +1,478 @@
-header{
-    border-radius: 25px;
-    background-color: #3897a3;
-    height: 200px;
-}
-.main-header{
-    margin: 0 auto;
-}
-.container {
-    /* max-width: 1200px; */
-    padding: 20px;
-    
-}
-
-.navbar {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    align-content: left;
-    /* justify-content: space-evenly; */
-    /* color: #18181b; */
-}
-
-.site_name {
-    font-family: 'Arial', sans-serif;
-    color: #0b0b0a;
-    align-content: left;
-    justify-content: space-evenly;
-    padding: 20px;
-    /* color: #18181b; */
-}
-
-.navbar h1{
-    font-size: 40px;
-}
-.navbar h2{
-    font-size: 20px;
-}
-.logo img {
-    justify-content: right;
-    box-align: right;
-    width: 325px;
-    height: 172px;
-    margin: 20px;
-}
-
-
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #B0E0E6;
+    background-color: #18181b;
     /* color: #18181b; */
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
-
-.story-list {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
-    border-radius: 20px;
-    margin: 20px; 
+header {
+    background-color: #ff9933;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
-.story-list li {
-    padding: 10px;
-    margin: 10px 0; /* Adds space between list items */
-    background-color: #333; /* Set a background color for each list item */
-    color: white; /* Set text color */
-    border-radius: 10px; /* Optional: Adds rounded corners to list items */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-
-.story-list li:hover {
-    background-color: #ff9933; /* Change color on hover */
-}
-
-.story-list-text{
-    color: white; /* Set text color */
-    align-items: flex-start;
-} 
-
-.story-list-text p {
-    font-weight: 50;
-}
-.story-list-text h2 {
-    font-weight: 100;
-}
-
-.story-list button{
-    height: 50px;
+.header-content-center {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header-content-center h1{
+    margin: 0;
+    font-size: 2.5em;
+    color: #333;
+}
+.header-content-center p{
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #666;
+}
+.header-title {
+    flex: 1;
+    text-align: left; /* Align text to the left for better spacing with the logo */
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.header-title p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.logo {
+    width: 150px; /* Adjust the width as necessary */
+    height: auto;
+    margin-left: 20px;
+}
+
+.book-carousel {
+    display: flex;
+    overflow-x: auto;
+    margin: 20px auto;
+    padding: 10px;
+    justify-content: center;
+}
+.book-carousel img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.summary-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+.summary-options div {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin: 10px;
+}
+.summary-options div:hover {
+    transform: scale(1.05);
+}
+.summary-options h2 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+.summary-options p {
+    font-size: 0.9em;
+    color: #666;
+}
+.book-info {
+    text-align: center;
+    margin-top: 20px;
+}
+.book-info h2 {
+    font-size: 2em;
+    color: #333;
+}
+.book-info p {
+    font-size: 1em;
+    color: #666;
+    margin: 5px 0;
+}
+.summary-text {
+    text-align: left;
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+    white-space: pre-wrap;
+}
+/* New Styles for Chapter Title */
+.chapter-title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0; /* Smaller margin compared to summary-options */
+}
+
+.chapter-tile {
+    background-color: #f7f7f7; /* Lighter background to make it less prominent */
+    border-radius: 6px; /* Smaller border radius */
+    padding: 6px 12px; /* Smaller padding */
+    width: 25%; /* Smaller width */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); /* Lighter shadow */
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin: 6px; /* Smaller margin between tiles */
+}
+
+.chapter-tile:hover {
+    transform: scale(1.02); /* Smaller scale on hover */
+}
+
+.chapter-tile h3 {
+    margin: 4px 0;
+    font-size: 1em; /* Smaller font size */
+    color: #666; /* Lighter color to indicate lower hierarchy */
+}
+
+.chapter-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    text-align: center; /* Center the text */
+    cursor: pointer; /* Change cursor to pointer */
+    margin: 10px; /* Space between buttons */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for hover effects */
+}
+
+.chapter-button:hover {
+    background-color: #0056b3; /* Darken background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.chapter-button p {
+    margin: 0; /* Remove default paragraph margin */
+    font-size: 1em; /* Set font size */
+    font-weight: bold; /* Make text bold */
 }
 
 
-footer {
-    color: #ff9933;
+.main-header {
+    background-color: #18181b;
+    padding: 20px 20px;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-family: 'Arial', sans-serif;
-    background-color: #99181b;
+}
+
+.logo img {
+    justify-content: flex-start;
+    width: 325px;
+    height: 172px;
+    /* margin-left: 20px; */
+    margin-left: -100px;
+}
+
+.nav-links {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    gap: 60px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-links li a:hover {
+    color: #a0a0a0;
+}
+/* 
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+} */
+
+.signup-btn, .login-btn {
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30x;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.signup-btn {
+    background-color: #fff;
+    color: #1a1a1a;
+   width: 50px;
+   height: 40px;
+   margin-right: 10px;
+}
+ .login-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+.signup-btn:hover{
+    background-color:#1a1a1a;
+    
+    color: white;
+}
+
+/* Update for the hero section */
+.hero-section {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.hero-section h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 72px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 200;
+    line-height: 117px;
+}
+
+.search-bar {
+    display: inline-block;
+    width: 50%;
+    position: relative;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 15px;
     border-radius: 25px;
-    /* margin: 100px; */
-    padding: 20px 20px 0px 0px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #a0a0a0;
+}
+
+
+
+.book-carousel-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 100%;
+    overflow: hidden; /* Ensure no scroll bars appear */
+    padding: 0 20px; /* Adjust padding for better responsiveness */
+}
+
+.book-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    align-items: center;
+    /* Remove vertical scroll behavior */
+    white-space: nowrap; /* Prevent wrapping of images */
+}
+
+.book-carousel img {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Ensure images are fully visible */
+    height: auto;
+    max-height: 200px; /* Adjust max height as needed to fit design */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.book-carousel img.active {
+    transform: scale(1.2);
+    z-index: 2;
+    opacity: 1;
+}
+
+.book-carousel img.inactive {
+    opacity: 0.5;
+    transform: scale(0.8);
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.play-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.play-button button {
+    background-color: #00cc00;
+    border: none;
+    color: white;
+    font-size: 36px;
+    padding: 15px 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.play-button button:hover {
+    background-color: #009900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-control {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .book-carousel img {
+        max-width: 100px;
+        max-height: 150px; /* Adjust for smaller screens */
+    }
+
+    .book-carousel img.active {
+        transform: scale(1.2);
+    }
+
+    .book-carousel img.inactive {
+        transform: scale(0.8);
+    }
+
+    .play-button button {
+        font-size: 28px;
+        padding: 10px 20px;
+    }
+}
+
+.pagination-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination-container button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-container button:hover {
+    background-color: #0056b3;
+}
+
+.pagination-container button.active {
+    background-color: #0056b3;
+    font-weight: bold;
+}
+
+
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+footer p {
+    margin: 0;
+}
+.RIGHT{
+    margin-left: 20px; /* Pushes the RIGHT container to the right */
+    padding-left: 10px
+}
+.signup-btn, .login-btn {
+    padding: 20px 40px; /* Increased padding */
+    font-size: 25px; /* Larger font size */
+}
+.search-bar {
+    position: relative;
+    width: 800px; 
+    margin: 0 auto; 
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 15px 20px 15px 50px; 
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    font-size: 24px;
+    background-color: transparent; 
+    color: white; 
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.7); 
+}
+
+.search-bar .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px; 
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7); 
+    font-size: 20px;
+    pointer-events: none; 
 }
